@@ -15,14 +15,14 @@
 </head>
 
 <body class="font-Mono font-bold text-white bg-[#1A2A42]">
-    <div class="absolute grid grid-flow-col gap-10 h-6 bottom-4 right-4">
+    <div class="absolute grid grid-flow-col gap-10 h-4 bottom-4 right-4">
         <div class = "bg-[#FE4A6B] w-20"></div>
         <div class = "bg-[#2A4C89] w-20"></div>
         <div class = "bg-[#2A88D8] w-20"></div>
         <div class = "bg-[#A9CCEA] w-20"></div>
         <div class = "bg-[#103675] w-20"></div>
     </div>
-    <div class="absolute grid grid-flow-col gap-10 h-6 top-4 left-4">
+    <div class="absolute grid grid-flow-col gap-10 h-4 top-4 left-4">
         <div class = "bg-[#103675] w-20"></div>
         <div class = "bg-[#A9CCEA] w-20"></div>
         <div class = "bg-[#2A88D8] w-20"></div>
@@ -31,9 +31,13 @@
     </div>
     <p class="absolute left-[85%] top-[50%] -rotate-90 text-4xl">&lt;good_team_name&gt;</p>
     <div class="grid place-items-center h-screen">
-        <div class="border-[#B23F5D] border-2 w-[75%] grid gap-20">
+        <div class="border-[#B23F5D] border-2 w-[75%] grid gap-20 pb-20">
         <span class="border-[#B23F5D] border-b-2 h-12 w-[100%] bg-[#2A4C89] relative top-0 left-0"></span>
-            <h1 class="text-6xl" style="text-align:center">Fake News Predictor</h1>
+        <h1 class="text-6xl" style="text-align:center">Fake News<br>Detection Using NLP</h1>
+
+            <div class="grid grid-flow-col gap-0">
+
+
             <form class="pl-16" action="{{ url_for('predict')}}" method="post">
                 <label class="" for="topic">Topic: </label>
                 <input class="text-black" type="text" name="topic" placeholder="news topic"
@@ -45,46 +49,14 @@
                     required="required">
                 <br>
                 <br>
-                <!-- <label for="children">Children:  </label> -->
-                <!-- <select id="children" name="children", placeholder="children", required="required"> -->
-                <!--   <option value="0">Not Applicable</option> -->
-                <!--   <option value="1">1</option> -->
-                <!--   <option value="2">2</option> -->
-                <!--   <option value="3">3</option> -->
-                <!--   <option value="4">4</option> -->
-                <!--   <option value="5">5 & above</option> -->
-                <!-- </select> -->
-                <!-- <br> -->
-                <!-- <br> -->
-                <!-- <label for="Sex">Sex:  </label> -->
-                <!-- <select id="Sex" name="Sex" placeholder="Sex", required="required"> -->
-                <!--   <option value="0">Male</option> -->
-                <!--   <option value="1">Female</option> -->
-                <!-- </select> -->
-                <!-- <br> -->
-                <!-- <br> -->
-                <!-- <label for="Smoker">Smoker:  </label> -->
-                <!-- <select id="Smoker" name="Smoker", placeholder="Smoker", required="required"> -->
-                <!--   <option value="0">No</option> -->
-                <!--   <option value="1">Yes</option> -->
-
-                <!-- </select> -->
-                <!-- <br> -->
-                <!-- <br> -->
-                <!-- <label for="Region">Region:  </label> -->
-                <!-- <select id="Region" name="Region", placeholder="Region", required="required"> -->
-                <!--   <option value="0">Northeast</option> -->
-                <!--   <option value="1">Northwest</option> -->
-                <!--   <option value="2">Southeast</option> -->
-                <!--   <option value="3">Southwest</option> -->
-                <!-- </select> -->
                 <button class="bg-[#2A88D8] p-1 border" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
             </form>
             <br>
             <br>
-            <h2>
+            <h2 class="text-3xl">
                 {{ prediction_text }}
             </h2>
+            </div>
 
 
         </div>
